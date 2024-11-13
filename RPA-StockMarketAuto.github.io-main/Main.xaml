@@ -1,0 +1,593 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="658,5086" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="ok...&#xA;&#xA;- Read range, i think makes sure theres a text &quot;to write under&quot; seems to be a required&#xA;&#xA;-  Build database is what i guess is taking existing popullated rows and making sure new rows are added under and not over written&#xA;&#xA;- add row adds the info we want to the new row we want to print out&#xA;&#xA;- ok so now i need to simulate the 30 min try again thing" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="606.4,4303.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ExxonSharePriceVar" />
+      <Variable x:TypeArguments="x:String" Name="DateTimeVar" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[new DataTable]" Name="myDataTable" />
+      <Variable x:TypeArguments="x:Double" Default="3" Name="myint" />
+      <Variable x:TypeArguments="x:String" Name="DateDate" />
+      <Variable x:TypeArguments="x:String" Name="TimeTime" />
+      <Variable x:TypeArguments="x:String" Name="WexSharePriceVar" />
+      <Variable x:TypeArguments="x:Double" Default="[Convert.ToDouble(DateTime.Now.Hour) + Convert.ToDouble(DateTime.Now.Minute) / 100]" Name="CEF" />
+      <Variable x:TypeArguments="x:Double" Default="16" Name="TEF" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap2010:Annotation.AnnotationText="first thing main thing to assign the cef the current time as a deciaml/double &#xA;&#xA;- Convert.ToDouble(DateTime.Now.Hour) + Convert.ToDouble(DateTime.Now.Minute) / 100" sap:VirtualizedContainerService.HintSize="606.4,205.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Double">[CEF]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(DateTime.Now.Hour) + Convert.ToDouble(DateTime.Now.Minute) / 100]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <If sap2010:Annotation.AnnotationText="MOST IMPORTANT CONDITION must be:&#xA;&#xA;CEF &lt;= TEF" Condition="[CEF &lt;= TEF]" sap:VirtualizedContainerService.HintSize="606.4,3944.8" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="534.4,2932" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard sap2010:Annotation.AnnotationText="this is for exxcon" AttachMode="ByInstance" DisplayName="Use Browser Chrome: RPA Stock Market" sap:VirtualizedContainerService.HintSize="500.8,1656" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1376" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,269.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Maximize'" sap:VirtualizedContainerService.HintSize="388,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="856, 1, 70, 44" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Maximize'" FullSelectorArgument="&lt;ctrl name='RPA Stock Market - Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='RPA Stock Market - Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" Guid="f5ca376d-2151-428d-89a7-226478c9099e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAvCAYAAABE6VyYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACfSURBVGhD7dDBCcNADABBlxNIyDcv91/WpYEDLzbmMIxgPgLpsdvr8x0c296/fXBMqEioSKhIqEioSKhIqEioSKhIqEioSKhIqEioaFmoKzP7d7eloWb7I2fvrhIqEioSKhIqEioSKhIqEioSKhIqEioSKloa6uzM/t1tWainESoSKhIqEioSKhIqEioSKhIqEioSKhIqEioSKhIq2ccfzWt2Df7pxfoAAAAASUVORK5CYII=" InformativeScreenshot="70328039d2a984be2a3208aca77e5e34.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='RPA Stock Market - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NSelectItem DisplayName="selecting Exxon" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Exxon RPA Corp." ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>----- Select -----</x:String>
+                        <x:String>Exenon UI Pharma.</x:String>
+                        <x:String>WEX Academy Inc.</x:String>
+                        <x:String>Exxon RPA Corp.</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="71, 470, 240, 33" DesignTimeScaleFactor="1.5" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl id='country' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='country' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="30bb4987-786f-4bee-8095-2bb802bd4116" InformativeScreenshot="5c0c4e24f99d6dd0c197fff254854665.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click search" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvElementArea="317, 403, 31, 31" CvType="Icon" DesignTimeRectangle="318, 470, 32, 32" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='image' class='' aaname='' /&gt;" Guid="28953b39-7b45-4101-90fc-3aa799745231" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMHSURBVFhH7Zb7K/NhGMb9+TOLcsphzKEQflGKrYko5JDDTyRySCwbGZk5Xfrc7ZHXu/Z8v2uZ981VazHzfJ7rvq9ra9AP0y+QTx9ADbFUXR9OfwDVS79APv2fQG9vb3p8fNTDw4MKhYJeX19Lr4RX1UAcen9/r1wup/Pzcx0dHeng4ECHh4f289XVlfL5vJ6fnw04qKoGAmZ9fV3Dw8NqbGxUW1ubOjo67Dkajaqvr0/z8/MG/PLyUnqXX6GBuO3FxYVWVlYMpr+/X2NjY5qZmVE6nVYymdTExIQGBgaUSCQ0Nzen4+NjgwriVCggxnR3d6fl5WX19vaqs7NTqVRKZ2dnNh52COcymYyWlpbMpfb2doPKZrM2Pp9CAXHY2tqahoaGDGZ/f1+3t7cqFovmAMA8OBhw9mlwcNDAcJC/9SkUELd0Y8IZ3wFcYHV11aC6u7tt0X0KDMT8SQ8LzM4wJpypJFy7ubnR1NSUYrGYTk9PvQseGIieIdqtra1mPyPx9Q2XYHyLi4vq6urS9va2rq+vS6+WV2AgFpaeIdqkKWgBAkUiCQE14RtbYCAAWFJSQ7TZjyAOMSISxw5tbW3VziEOdztEz1xeXurp6an0ankBQx1MT0+rubnZ+sj3nsBACLuJMKXHrdmjSmLMOzs7GhkZUU9Pj/WTrxxDAXHbhYUFAyL6jJDR4YQ7yI0JmJOTE42Pj9v+TE5OeseFQgGRGP4pzctnFv1CzxBtRuFgAMcZYCKRiAVhdna29sXoDmQXSBouAUXPEG3SxCjZmdHRUcXjcYMhCLi6ublZu5R9FlC0Nn1Eeig9ngHgmQVmZxgTiQSGbwC0/MbGhjnI/yinqoBwivExAm5Ma1N69AzRxkEWmPHyNzgDDKCEgpEDVU5VAX0Vt2WPgAPC7ZMTv8cZYFpaWiqWZE2AgghHcAaYpqYmc2x3d9cu8xn+24A4GCj3LZOU8o2SkX7ep28DcmJMOAPM3t7eX5+J3w6EnFvAfFVdgFyflftwrgtQJf07QPV8OH0A/QxJ7wJhvGSRWJU/AAAAAElFTkSuQmCC" InformativeScreenshot="0771030e533f714b3402e64bb3b88a8c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NGetText sap2010:Annotation.AnnotationText="everything from here and below needs to be looped" DisplayName="Get Text Price Share for Ecxxon" sap:VirtualizedContainerService.HintSize="433.6,220.8" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" TextString="[ExxonSharePriceVar]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvTextArea="380, 563, 171, 58" CvType="AnyWordGroup" DesignTimeRectangle="382, 556, 169, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'32.45'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' class='' /&gt;" Guid="5c945cb6-fcb1-4088-bad2-385c303396a2" InformativeScreenshot="bf3c0451b03acefaada9ed37cb105dc0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <uix:NSelectItem DisplayName="selecting WEX" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="WEX Academy Inc." ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>----- Select -----</x:String>
+                        <x:String>Exenon UI Pharma.</x:String>
+                        <x:String>WEX Academy Inc.</x:String>
+                        <x:String>Exxon RPA Corp.</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" DesignTimeRectangle="71, 470, 240, 33" DesignTimeScaleFactor="1.5" ElementType="DropDown" FriendlyName="'----- Select -----'" FullSelectorArgument="&lt;webctrl id='country' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='country' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="30bb4987-786f-4bee-8095-2bb802bd4116" InformativeScreenshot="5c0c4e24f99d6dd0c197fff254854665.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click search for WEX" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvElementArea="314, 467, 37, 37" CvType="Button" DesignTimeRectangle="318, 470, 32, 32" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='image' class='' aaname='' /&gt;" Guid="0f9bb971-4d77-4cad-a827-6d60e87fef1b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMHSURBVFhH7ZZrS6JRFIX7+ZZS0EW6X6Gi+hIEmhSFQYUWXT4loWgRFXahDLu34tl4hqYR3/cVSWeYBSJldp6z9l5L29Rial2gtkiiqQ+n34Capf9AXvo3gT4+PvT09KRyuazHx0e9v79XXgmuuoE49OHhQdfX1zo7O1Mul9Px8bGy2az9XCwWdX9/r9fXVwP2q7qBgEmn05qamlJ7e7t6enrU19dnzx0dHRoZGdHa2poBv729Vd7lrcBA3Pb8/FxbW1sGMzo6qtnZWcViMa2srGh5eVnz8/MaHx/X2NiYVldXlc/nDcqPU4GAGFOpVNLm5qaGhoYUjUaVSCR0enpq42GHcO7y8lIbGxvmUm9vr0FdXV3Z+LwUCIjDUqmUJicnDSaTyeju7k7Pz8/mAMA8OBhw9mliYsLAcJC/9VIgIG7pxoQzXgdwge3tbYMaGBiwRfeSbyDmT3pYYHaGMeFMLeHa7e2tFhcXFYlEdHJy4rngvoHoGaLd3d1t9jMSr77hEowvmUyqv79f+/v7urm5qbxaXb6BWFh6hmiTJr8FCBSJJATUhNfYfAMBwJKSGqLNfvhxiBGROHZob2+vcQ5xuNsheubi4kIvLy+VV6sLGOpgaWlJnZ2d1kde7/ENhLCbCFN63Jo9qiXGfHBwoOnpaQ0ODlo/eZVjICBuu76+bkBEnxEyOpxwB7kxAVMoFDQ3N2f7s7Cw4DkuFAiIxPBPaV4+s+gXeoZoMwoHAzjOABMKhSwI8Xi88cXoDmQXSBouAUXPEG3SxCjZmZmZGQ0PDxsMQcDV3d3dxqXsq4Citekj0kPp8QwAzywwO8OYSCQwfAOg5Xd2dsxB/kc11QWEU4yPEXBjWpvSo2eINg6ywIyXv8EZYAAlFIwcqGqqC+i7uC17BBwQbp+c+D3OANPV1VWzJBsC5Ec4gjPAhMNhc+zw8NAu8xX+x4A4GCj3LZOU8o2SkX7dpx8DcmJMOAPM0dHRH5+JPw6EnFvAfFdTgFyfVftwbgpQLf09QM18OP0CahW1GJD0CUmHvGTV17jBAAAAAElFTkSuQmCC" InformativeScreenshot="6df6888b00eb4323b0b53720d04eb8f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NGetText DisplayName="Get Text share price for wex" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="62e1168b-5a78-4d6d-85f2-6a0d9b44fb0a" TextString="[WexSharePriceVar]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/assets/rpaStockMarket/index.html" CvTextArea="416, 563, 127, 58" CvType="AnyWordGroup" DesignTimeRectangle="382, 556, 169, 75" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'36.45'" FullSelectorArgument="&lt;webctrl id='cnt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cnt' tag='SPAN' type='' class='' /&gt;" Guid="303591a3-d058-464f-aa82-8a7cbc0fb63e" InformativeScreenshot="76faeaaf8bcea8f4865f88ad0002666a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NGetText.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGetText>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[DateDate]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[Date.Now.ToShortDateString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[TimeTime]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("HH:mm")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1042" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7363369035bdf6e4f809ce7299f7fcd1.jpg" Selector="&lt;html app='chrome.exe' title='RPA Stock Market' /&gt;" Title="RPA Stock Market" Url="https://rpachallenge.com/assets/rpaStockMarket/index.html" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="this is the while excel part in the scope&#xA;&#xA;1- creates the Excel, adds the headers&#xA;&#xA;2- adds the data table and the rows" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="500.8,1216" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="SMData.xlsx">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="421.6,991.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelWriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="this &quot;write range' sets up the excel sheet" DataTable="[myDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,151.2" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Sheet1" StartingCell="A1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ExcelWriteRange>
+                  <ui:ExcelWriteCell Cell="A1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="Date" />
+                  <ui:ExcelWriteCell Cell="B1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="Time" />
+                  <ui:ExcelWriteCell Cell="C1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="Exxon RPA Corp" />
+                  <ui:ExcelWriteCell Cell="D1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="Wex Academy" />
+                  <ui:BuildDataTable sap2010:Annotation.AnnotationText="does writing in the data table here repreat every time? if so then remove it and add in the headings manually in the excel sheet" DataTable="[myDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="388,120" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Time&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Price_x0020_Share&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;PriceShareTw0&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BuildDataTable>
+                  <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="" ArrayRow="[{DateDate, TimeTime, ExxonSharePriceVar,WexSharePriceVar}]" DataTable="[myDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,220" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:AddDataRow>
+                  <ui:ExcelAppendRange DataTable="[myDataTable]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_1" SheetName="Sheet1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ExcelAppendRange>
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExcelApplicationScope>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="528.6666666666666,782" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486.6666666666667,86" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Stock Market time zone closed&quot;]" />
+          <ui:CommentOut sap2010:Annotation.AnnotationText="i think only way to add the graph is with another project&#xA;&#xA;would have to have that program run just before 16:00&#xA;&#xA;or might have to have the email program also in the new project" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,224.66666666666666" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,164" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SMData - Excel" sap:VirtualizedContainerService.HintSize="388,53.333333333333336" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="747111b7-66ef-46c7-9d76-8738655a5c4a" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,988" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="388,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="747111b7-66ef-46c7-9d76-8738655a5c4a" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvTextArea="52, 349, 45, 18" CvTextArgument="Date" CvType="Text" DesignTimeRectangle="51, 345, 136, 29" DesignTimeScaleFactor="1.5" ElementType="Cell" FriendlyName="'Date'" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia automationid='A1' cls='XLSpreadsheetCell' name='A1' tableCol='1' tableRow='1' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia automationid='A1' cls='XLSpreadsheetCell' name='A1' role='item' /&gt;" Guid="3e1e0893-40e1-4fc1-97ba-96eecc9ddaa6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAhCAYAAAALQkMOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIZSURBVHhe7ZvdbcMgFEa9StdggI7CAl2E12QQJsmb37MGvcAFmx8nvjGxmuo70idFhsaVOLpcqDrd73f39fONIA/jPfGZrteru1wu3UkIkuId8QkVxn8AYIvb7cafHIQBz4EwQASEASIgDBABYYAICANEQBggYp8ws3FqmtxURymntHF25nng3yMThgTRWuesJVLmqDXW6fAO4+Df30UmjLb8YGG2S/XpDAuAMJ/AYWECVnOl0bTsrwJhPoExwtASG+WFqavMTBWIti4ei6Ftrdq+rF6Pr1J82UzzqGdajStFgsKuUxkkjJ+i4iKuZMjPaGGNtc7S9qVZnqLnmeNYeEeeS8lTkpDcZPsxk3oo5Q63T2A3w4RJ21Itwtws5tbWs70lJfGa1+/5vcBQ3lph+qRqUfc7W8Lw/LD90BZXhH4mjKHvOYvhwrRTfB9jnGmO43uF4eePAmFOY3DTW/UTvuGtFzdHKAw9bysMh2eC9zNGmDReLPYikS6OMi9uSYeO7GAUx4VJY5Ry+EHF6AqwLcbD/ihUGf4M3o5MmM0/DbR3K550v5KOwiYfhX1aMfJ9DDW42t+5ZANZPv6udEQ3NCc8e9pog1HIhKnjBTK9o3OCqgYvakzcnqIYvS0mVZ+YUoT24i7e2UCWM9knDAAMhAEiIAwQAWGACAgDRBTC9P6PFkF6gTCIKL7SZGEA2GLtCIQBT1kcce4XHVfkUjuL298AAAAASUVORK5CYII=" InformativeScreenshot="c3fae37f230335aae226d876f45e41e4.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SMData - Excel' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="109, 321, 16, 19" CvTextArgument="A" CvType="Text" DesignTimeRectangle="51, 316, 136, 29" FriendlyName="'A'" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia cls='XLGridColumnHeader' name='A' tableCol='1' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia cls='XLGridColumnHeader' name='A' role='Column Header' automationid='' check:fulltext='A' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIwAAAAhCAYAAAALQkMOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIESURBVHhe7ZhRasJAFEWzle4ha+gqsouuIMtQEBFHRAQRERERESSIiIjoGtzGtLmJ7X0lte33uwMHhng+DzPPSe73exTirygY8S8QzPV6bfxRiBLuA8FcLhcjCMFwHwjmfD4bQQiG+0Awp9PJCEIw3AeCOR6PRhCC4T4QzOFwMIIQDPeBYPb7vRGEYLgPBFMUhRGEYLgPBLPb7YwgBMN9IJjtdmsEzxR5GpMkiWmuU/cB94FgNpuNEfwSYlbGkpbRZDE0Ov7gPhDMer02gltCVoVS5DH9CCcLDY5DuA8Es1qtjOCVkCUxycLHvoh5+tg3u57gPhDMcrk0gk+q6+hxqlSzTBrz4rvnD+4DwSwWCyN4pAqE55Z6ntHwa/pAMPP53Aj+aL6CcEWleSzom0e4DwQzm82M4I6fhlwMwRp+uQ8EM51OjeANnCSNf6Ora8n78Mt9IJjJZGIEX9RRPMX3mwz3gWDG47ERXIFrJ41ZHmIIDeTVteR5+OU+EMxoNDKCH+ph9+lgW59Ajodf7gPBDIdDI7ihHnZ/Oz2qGcfvmwz3gWAGg4ERvPDnx7k6LK/DL/eBYPr9vhGEYLgPBNPr9YwgBMN9IJhut2sEIRjuA8F0Oh0jCMFwHwjm5e1ViKd8BtNut2Or1WqUhHhQNlKCE6bcaGn9tG63W72LCkbr9/UVTIzv9S5VXEqB6I8AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'excel.exe SMData - Excel'" sap:VirtualizedContainerService.HintSize="388,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="747111b7-66ef-46c7-9d76-8738655a5c4a" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvElementArea="1105, 118, 52, 48" CvType="Icon" DesignTimeRectangle="1103, 116, 56, 52" DesignTimeScaleFactor="1.5" ElementType="Icon" FriendlyName="'excel.exe SMData - Excel'" Guid="0d09b010-67e7-4522-a771-e5840637a329" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAA0CAYAAADfRPtlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAQOSURBVGhD7ZhLSFRRGMfdFT1XtYkWiS5aJQUhLtpkQyCIIORjFgVZ5rNpqHxhBqZNlEoqpWSRDEiZKYqmmCO+H5SPtIkSRiy0CHxkgaGb0/yPnOud8dy5Mzmj99Zd/GDmntf3u+c7jxm/Xz8Xyb+MJqh2NEG1838LFhYWqAJe7AyXgiEhwaqAFztDVrC4+D5ZWVlxm+fPqkhG2lVumSvQBm15ZVIgNk2Q95ChCXLQBCXQBDlognZULdjQUE9qa2u4sTPUKbi8TH4vLXFjdkZWMOpMJB3cXY4mlRG/8/U+wz+9jVjGp4UYW5pfEcPlVBqrwZDqED+QFUxJTqRv1l10OTU0kOOmQY9AmwPXLNwyRljpEHk/9Z3GNmmzkby8XBpjREQ4iY+/SD87O3g9ReMrR2iwue2zHsFeCq8M1I3/EOLq7uoksbHRDvFlZ2eRmJgoh/iBKgRbP67JISV1p04SnS6UDAz00zGtViuNlffLQvGCYjmzuZLGpNfHkJmZGWFMzB6Ekbbi+IGiBXlyWGtiOYvFIjl7QLGCYjm2mWCmxGNBFBsM1qM4bjGKFBTLZWWmc+WAyXSblmHTEcctRnGC7srhFoOyDf9lsZmCSVVWYWxXctg1sam4Sk2GrOBmHfTnno4J42JWpOQAdlEcFSPDw0IbKWQFN+OqJpZju6WUHJ6jHOch6rObjRRbnqK8o0BKrqLiES0vL3sotDld0Ct85rGlgtXv3Jdj5x3WJmujfzxKx2LfeWyZoHloXhiHyRmNV7h94krmvKn02xbo2lWc4J3OOe7MOV+/GHjG5NhVbPTzAjF1zCpLsLR/ngxOOfaPA1pOju2Y7DCfmV0kJX1ztE/FCIrTkYGAEbgncoDJKUZQLFfdbyMnTJ20HOyIe0Eii3vIxLdFhz6k5Mxv1+QUIVjUM0e+2lMKfd1t+kCfb7vUSI7c6qPBHcrsoM92JjaSuqFp2t5dOUUIsjXXNvbFLtFE9hlbibFh2iFIvXmCSgdktNHdEr8O3JEDXhH0lPCEbDpoQGa70A/Scrtd4kL1JDfQ0OLVlxIUHrdOLji/m5a5gtXl4VIQd0JPySqpInFP3ghXqHLLJxoE3jZPDmBWUSfw7D0HOaxZ9CUHq8/DpeBGgeR+QwvZk9y8LjWdgaC+tIvbz0bwmSDevn9aK01NrDOeFCOyYnUDuvFy7dLtLbwiCBmkIkCQIfmrRwE2Dzk5cPB6O9mV0Cj7y+Bv8NoMhhX1Uimw256SWHNyaYnywzmrmwiOEV6/G8WrKRr9YIAGuzelhe6MrgRRjnqo74vUZHh9DSJNj91sF2YT6ccOdoC/57EuURZkr4f6vH68hU83GcwoZHHIM+HAjNf0ua/FGD4TVAqaoNrRBNXNIvkDov5yy8Kj9dwAAAAASUVORK5CYII=" InformativeScreenshot="375466408c85c84261f3c2a55b3aad57.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SMData - Excel' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="388,182.66666666666666" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3" />
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,53.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,269.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'White, Table'" sap:VirtualizedContainerService.HintSize="388,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="747111b7-66ef-46c7-9d76-8738655a5c4a" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="1193, 423, 103, 78" DesignTimeScaleFactor="1.5" ElementType="ListItem" FriendlyName="'Light Blue,'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia cls='NetUIGalleryButtonGroup' name='Format as Table' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='Light' /&gt;&lt;uia cls='NetUIGalleryButton' name='Light Blue, Table Style Light 16' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia cls='NetUIGalleryButtonGroup' name='Format as Table' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='Light' /&gt;&lt;uia cls='NetUIGalleryButton' name='Light Blue, Table Style Light 16' role='List Item' automationid='' check:fulltext='Light Blue, Table Style Light 16' /&gt;" Guid="932ee67c-3631-44d1-85ed-d0ea1573e7f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAABSCAYAAABTyippAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHrSURBVHhe7ZixbcQwEARVnCtyjW7CoVtwA28ok/gE94Q9LExgBtjwJhkw4fGCbSDWRhBrI4i1EcTaCGJtBLE2glgbIWN9fH6x0BSlWB3gWVPxEMsk6SGWSdJDLJOkh1gmSc/jWMdxlDaC576R0TPj/WqgIqmAZ03FQyyTpIdYJkkPsUySHmKZJD3EMkl6SrFYZopSrO+fX3t41js9CmKZ6/QoiGWu06MglrlOj4JY5jo9isexZp+Ss11vzuG573pz7vQoeFnmOj0KYpnr9CiIZa7ToyCWuU6PgljmOj0KYpnr9ChKsVhmilKsDvCsqXiIZZL0EMsk6SGWSdJDLJOk53Gs2afkbCN47hsZPTPerwYqkgp41lQ8xDJJeohlkvQQyyTpIZZJ0kMsk6SnFItlpijFmn3pPx2e9U6PgljmOj0KYpnr9CiIZa7ToyCWuU6P4nGs2afkbNebc3juu96cOz0KXpa5To+CWOY6PQpimev0KIhlrtOjIJa5To+CWOY6PYpSLJaZohSrAzxrKh5imSQ9xDJJeohlkvQQyyTpeRxr9ik52wie+0ZGz4z3q4GKpAKeNRUPsUySHmKZJD3EMkl6iGWS9BDLJOkpxWKZKWQs+D8QayOItRHE2ghibQSxNoJYG0GsbXi9/gB8zuu44o79YAAAAABJRU5ErkJggg==" InformativeScreenshot="2474224b257dbaf613873cf39f017a45.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='SMData - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CvElementArea="1087, 107, 88, 114" CvType="Button" DesignTimeRectangle="1088, 111, 86, 111" FriendlyName="'White, Table'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia automationid='FormatAsTableGallery' cls='NetUIAnchor' name='Format as Table' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Home' /&gt;&lt;uia cls='NetUIChunk' name='Styles' /&gt;&lt;uia automationid='FormatAsTableGallery' cls='NetUIAnchor' name='Format as Table' role='Menu Item' check:fulltext='White, Table Style Light 1&amp;#x9;Light Blue, Table Style Light 2&amp;#x9;Light Orange, Table Style Light 3&amp;#x9;White,' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="747111b7-66ef-46c7-9d76-8738655a5c4a" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="80, 147, 113, 36" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;uia cls='NetUIButton' name='OK' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIButton' name='OK' role='Button' automationid='' check:fulltext='OK' /&gt;" Guid="910c7c40-ce9c-4bb9-bd9c-93e953441d94" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHUAAAAoCAYAAADAFLWVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFISURBVHhe7dfBEYMgEIVheqIbmqEVGrAISqEDO9iIiiCYmJlcss93+A8xePqGBc08z8KwIipgRAXshDpNE1Na6zigppSYsogKGFEBIypgRAWMqIARFTCiAkZUwIgKGFEBw0YNTowxp6yPw7rorRjrJbbP93ev1v97oKhRvM2IVnxsnwdxGbcDHFCjF7usc6Gu0RQk6opknISL/w5wF45nZ9QNXuMOLQGifoGyjtaKXlFHcI3hoa6jsx+7Xd2agurdOJo19mDUemZu4zqfwXrP0Tbu1OV32alhxb15V0F4qD+dqUlCHsFvL1k6AkQt4/Tz7bdFb1GP27HisxUStX6n9rBffqeWdUpvwaCoW9uOzbi1q4vQiLq0X6Y07lho1KdGVMCIChhRASMqYEQFjKiAERUwogJGVMBuUZnOWscTKsOIqIARFa5ZXvbusP6VqVN0AAAAAElFTkSuQmCC" InformativeScreenshot="26165621f18ee40b4d18f3d1d2ec677c.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='NUIDialog' title='Create Table' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-11, -11, 1942, 1042" Arguments="c:\users\shai\documents\uipath\smprojecttwo\smdata.xlsx" FilePath="C:\Program Files\Microsoft Office\root\Office16\excel.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAToSURBVGhD7ZpdTFtlGMfRacykPe2g0HJhA2rUbBmTlg8HdJOJg3XAWIjZ0u0CP4Yoc07GxoDNtcpoi5u7YHJhkI2yxUtiDJlG41TmpR/xQi80S+aFeqVLNHr5+Lxf55y2b+GcdqfFhCf5BQ5Nyu//9N/3XLRFa/M/nLuQu5F1BYL8b+JgfqoSfeGq+T7IFf+NSO58GY5wLcOzTiaTDVKhLECne5iasVkvk8kGmUw2oJPC1IyNTSaTDTKZbEAnN1MzNqsxgIepGZu1AAKZTDagk8kACRQwgkRaj0wmG9DJXIDK954Dw8w+D1Vzh6SBZDLZgE6eoorJveGK+F6oiHdDRawbPLE9jGgXxU2Y6KSUn+1gjO+mlI0HoexNwi5wvUFoR9qgNMKoON+jBbEsABFHVPHYMuJnJeJUnogjXLw0vJNScuZp8E4dhMpLGCKhhZDJZAMN4EnZOhWPMnH3hBBnW9fEg3LxiCbOaAWlvwEcw9vAOfYkOE+1UPSvRi7wACvXhYovW5d08Q2vP0Wxv1AHjqEAOEetCpBJXFYXSc9ZXfTiXP70DnAi9mf94DjWDM6R7dYEEOKpdemeH4bJL64iVyipdem6PATxzxMQv56AgYVJbesoTeVPEVrA1usDx6ClAZLFRV18U71w+9+/QczhD84l1eWXP3/njwB0zg5qW+fitPOI5QGEeLmk52TzYoiw6PnotWn+V4DFH26odWHiTN6BnXeMbs9DgBV6rt/0wMJbUBXtxlfmL3pNflafD6GUbutc3IHCBMsDMPEMxyJunHRdzC0ME7s+x68AYp9d1sTp1lFayJ/cRo/PPATQbV2IpxyLiz9+xZW1+f7Xn9LqoopT+QAoJwLWB9DXRX6et8KWt0NqbcR0zBxNqYsm7kBx5UQzKMeb8xBAV5dM53ngnUNcW5vQlTEuzrdOxOnWmbhyvAmUoSYobdsE5c/4wROqB8/BBooIkis0QPLWW7k8EdeOxaWb33Ft9sYlc+uP38AbCdKei7owcQTFlWOERusDJNcFpcV5zo/FkcWLVJjM1a+vQfTTS/wKIPrJLBMXWyfiVL4RlMFGsA9uzUeA5Lqo5zlSfW5/0pG5Ob4PvOFg0vuh6UKvVNz+GnL0CesDCHFRF/ogPxaXbn7LNdm2RV3I72KWfv6GiSN6ccqrDXkIIBEnx2Jofowrsu17z+xSe/7A6Xa4/Y/2KvS/P87EhTyKU47UWx+AXkjO85MfTtFNE0JzI2k9D04PwMTHMzDx0QwML1xIE7e9ghyuy0MAsvWU27/0WFym56q8Ks7kbQO11geg4vq7aMZjMXPP7UcQIs63TsQpL/vzEECI862vdCzKeq6KC3kUt73kh+J+Xx4CiLrcEXEh70P5Gih+sQZK29MD3ClYgOFAWBXnt//l6yLEubyuLmLrRLy4rwaUnk3g6qi2NoCJsSm1lWCI+kpwND0MJTs3Qtmex8G9r3Z1BNjQ8igYYsdjUNK2EVyduP0eH7j314HnwCoI4Nq9GVakA0Fxsnkqb9H2CehkLgDpslGION08kT8gF8gVdDIXgMqYwYLa6EEnkwEkT1JI0GktQEFBJ1Mf8t3v6toyLXuiQoA3yHfRycnUjM19yENIA7K1wBCHR5D1iOEh30+wI17kwQJDHMiH3OR7E6aGhCAf799bYIgDuhQV/QdKx+9+xO860AAAAABJRU5ErkJggg==" InformativeScreenshot="b2d1728624c5cf47bd1451b2d01c1021.png" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='SMData - Excel' /&gt;" Title="SMData - Excel" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+          <ui:CommentOut DisplayName="Comment Out email section" sap:VirtualizedContainerService.HintSize="486.6666666666667,304" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umab:OutlookApplicationCard Account="shahiljagjivan@gmail.com" AccountMismatchBehavior="UseDefaultEmailAccount" sap2010:Annotation.AnnotationText="before sending email sort excel file out" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="388,113.33333333333333" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_3">
+                  <umab:OutlookApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" sap2010:Annotation.AnnotationText="remeber to change the excel sheet here $$$$$$$$$$$$$$$$$$$$$$$$$" Body="Please find attched stock market data" BodyType="Text" Cc="shahil@firtech.co.za" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,113.33333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Stock Market Excel" To="ugan@firtech.co.za" UseDocumentAsBody="False">
+                          <umab:SendMailX.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                              <InArgument x:TypeArguments="x:String">SMData.xlsx</InArgument>
+                            </scg:List>
+                          </umab:SendMailX.Files>
+                          <umab:SendMailX.HtmlBodyFromFile>
+                            <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                              <umabh:HtmlContentArgument.RuntimeImages>
+                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                              </umabh:HtmlContentArgument.RuntimeImages>
+                              <umabh:HtmlContentArgument.ValueMappings>
+                                <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                              </umabh:HtmlContentArgument.ValueMappings>
+                            </umabh:HtmlContentArgument>
+                          </umab:SendMailX.HtmlBodyFromFile>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </umab:SendMailX>
+                      </Sequence>
+                    </ActivityAction>
+                  </umab:OutlookApplicationCard.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </umab:OutlookApplicationCard>
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:CommentOut DisplayName="Comment Out loop" sap:VirtualizedContainerService.HintSize="606,53.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="594.6666666666666,1050" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="this should be the loop that means do again after 30 minutes&#xA;&#xA;- testing with an int for now&#xA;&#xA;- the condition should technically if var is after 10am and before 4pm (will work times out later)&#xA;&#xA;- remeber if you take out the while loop you must take out the assign and the delay!!!&#xA;&#xA;- Convert.ToDouble(DateTime.Now.Hour)   --&gt; that is for the current time as a double" Condition="[CEF &lt;= TEF]" DisplayName="While" sap:VirtualizedContainerService.HintSize="532.6666666666666,939.3333333333334" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile.Body>
+              <Sequence sap2010:Annotation.AnnotationText="i guess the whole process would need to be looped" DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,598.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Delay sap2010:Annotation.AnnotationText="change duration to 30 MINUTES, cause it's running all day&#xA;&#xA;and the following variables&#xA;&#xA;CEF == Convert.ToDouble(DateTime.Now.Hour) + Convert.ToDouble(DateTime.Now.Minute) / 100&#xA;&#xA;TEF == 16&#xA;" Duration="00:30:00" sap:VirtualizedContainerService.HintSize="434,272.6666666666667" sap2010:WorkflowViewState.IdRef="Delay_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Delay>
+                <Assign sap2010:Annotation.AnnotationText="reassign the time as a number evem after the 30 minute wait this had to be here cause of the loop&#xA;" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Double">[CEF]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(DateTime.Now.Hour) + Convert.ToDouble(DateTime.Now.Minute) / 100]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+              </Sequence>
+            </ui:InterruptibleWhile.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InterruptibleWhile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>
